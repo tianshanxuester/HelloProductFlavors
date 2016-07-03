@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import com.ingphone.productflavors.BuildConfig;
+import com.ingphone.productflavors.FlavorTest;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView = (TextView)findViewById(R.id.HelloProductFlavorsText);
         textView.setText(BuildConfig.hello_text);
+
+        FlavorTest.outputFlavor();
 
     }
 
