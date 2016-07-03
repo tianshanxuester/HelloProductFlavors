@@ -9,7 +9,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "1.2"
     }
     buildTypes {
         release {
@@ -17,6 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        demo {
+            buildConfigField 'String','hello_text', "\"演示版本\""
+        }
+
+        publish {
+            buildConfigField "String", "hello_text", "\"发布版本\""
+        }
+    }
+
     sourceSets {
         main.java.srcDirs += ["../lib/src/main/java/"]
 //        main {

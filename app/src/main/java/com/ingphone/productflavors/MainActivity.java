@@ -8,15 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.MyClass;
+import android.widget.TextView;
+import com.ingphone.productflavors.BuildConfig;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MyClass.test();
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -29,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        TextView textView = (TextView)findViewById(R.id.HelloProductFlavorsText);
+        textView.setText(BuildConfig.hello_text);
+
     }
 
     @Override
